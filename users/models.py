@@ -15,7 +15,6 @@ class CustomUser(AbstractUser):
         return self.username
 
 
-
 class Request(models.Model):
     from_user = models.ForeignKey(CustomUser,on_delete=None,related_name='from_user')
     assigned_to = models.ForeignKey(CustomUser,on_delete=None,related_name='assigned_to')
