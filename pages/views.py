@@ -21,6 +21,7 @@ def home_page(req):
         form.save()
 
     content = {
+        'username' : req.user,
         'form' : form
     }
     return render(req,'pages/home.html', content)
