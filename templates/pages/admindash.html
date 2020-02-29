@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+
+<!-- Displays the Admin Dashboard -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Admin Dashboard</div>
+                <br>
+                <div class="panel-footel text-center">
+                    Welcome {{user.username}} You are logged in!  </div>
+                <br>
+                <br>
+                <div class="panel-body">
+                    <div class="list-group">
+                      <!--  partner id in link -->
+                      <a href="http://127.0.0.1:8000/proposals" class="list-group-item">Student Requests</a>
+                      <a href="http://127.0.0.1:8000" class="list-group-item">View History</a>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

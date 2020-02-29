@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<!-- Users can check their proposal status on this page -->
+
+ <h3>Current Status:</h3>
+  <ul>
+
+
+    <table class="table">
+
+      <thead>
+        <tr>
+        <th>Date</th>
+        <th>Return date</th>
+        <th>Place</th>
+        <th>Purpose</th>
+        <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+
+            <!-- Displays a list of all the partner Proposals sent to Check-In.com and an Accept/Refuse Button -->
+            <tr>
+              <td>{{request.when}}</td>
+              <td>{{request.return_date}}</td>
+              <td>{{request.place}}</td>
+              <td>{{request.purpose}}</td>
+                <td>Pending</td>
+
+
+            </tr>
+
+     </tbody>
+ </table>
+
+  <a href="http://127.0.0.1:8000" class="btn btn-info">Back to Dashboard.</a>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends '_base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+  <h3>Partner Requests from Users:</h3>
+  <ul>
+
+
+    <table class="table">
+
+      <thead>
+        <tr>
+        <th>User</th>
+        <th>Assigned_Date</th>
+        <th>Return_Date</th>
+        <th>Place</th>
+        <th>Purpose</th>
+        <th>&nbsp &nbsp &nbsp Status</th>
+        </tr>
+      </thead>
+      <tbody>
+
+            <!-- Displays a list of all the partner Proposals sent to Check-In.com and an Accept/Refuse Button -->
+          {% for proposal in proposals%}
+
+            <tr>
+              <td>{{proposal.from_user}}</td>
+              <td>{{proposal.when}}</td>
+              <td>{{proposal.return_date}}</td>
+              <td>{{proposal.place}}</td>
+              <td>{{proposal.purpose}}</td>
+
+
+                  <td><a class="btn btn-success pull-right" href="http://127.0.0.1:8000/proposals/accept">Accept</a></td>
+                  <td><a class="btn btn-danger pull-right" href="http://127.0.0.1:8000/proposals/reject">Refuse</a></td>
+
+
+            </tr>
+
+          {% endfor%}
+     </tbody>
+ </table>
+
+  <a href="http://127.0.0.1:8000" class="btn btn-info">Back to Dashboard.</a>
+
+
+
+
+
+
+
+{% endblock %}

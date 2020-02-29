@@ -22,3 +22,11 @@ class Request(models.Model):
     return_date  = models.DateField(blank=True,null=True)
     place = models.CharField(max_length=255,blank=True,null=True)
     purpose = models.CharField(max_length=255,blank=True,null=True)
+
+class Partners(models.Model):
+    user = models.ForeignKey(CustomUser,on_delete=None,related_name='user')
+    when = models.DateField(blank=True,null=True)
+    return_date  = models.DateField(blank=True,null=True)
+    place = models.CharField(max_length=255,blank=True,null=True)
+    purpose = models.CharField(max_length=255,blank=True,null=True)
+

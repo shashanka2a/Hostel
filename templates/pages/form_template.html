@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block content %}
+<form method=POST>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>
+<br>
+<br>
+<a href="http://127.0.0.1:8000" class="btn btn-info">Back to Dashboard.</a>
+{% endblock content%}
