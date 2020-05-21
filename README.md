@@ -1,4 +1,4 @@
-We have made a Hostel Outing Management Systemusing Django framework.We have developed two views,each for student and warden.Through this a student can fill the outing request form and submit.The warden gets a list of student requests and can approve/decline.Meanwhile student can check his/her request status in the dashborad.
+We have made a Hostel Outing Management System using Django framework.We have developed two views,each for student and warden.Through this a student can fill the outing request form and submit.The warden gets a list of student requests and can approve/decline.Meanwhile student can check his/her request status in the dashborad.
 
 ## First-time setup
 
