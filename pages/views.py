@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from users.models import CustomUser,Request,Partners
 from users.forms import UserOutingForm
 from django.contrib.auth.decorators import login_required
@@ -30,22 +30,12 @@ def outing_request(req):
     }
     return  render(req,'pages/form_template.html',content)
 
-def acceptProposals(req):
-    """  proposals = Request.objects.filter(from_user = req.user)
-
-    for proposal in proposals.all():
-        newpartner.user = proposal.get(user=proposal.user)
-        newpartner.when = proposal.when
-        newpartner.return_date = proposal.return_date
-        newpartner.place = proposal.place
-        newpartner.purpose = proposal.purpose
-    newpartner.save()
-    proposal.delete()"""
-    proposal = Request.objects.filter(from_user=req.user)
+def acceptProposals(req,pk):
+    proposal = Request.objects.get(id=pk)
     proposal.assigned_to = 'accepted'
     content = {'status': proposal.assigned_to}
     proposal.delete()
-    return render(req,'pages/proposals.html',content)
+    return redirect('proposals')
 
 def checkstatus(req):
     #request_list = Request.objects.filter(from_user = req.user)
@@ -55,10 +45,10 @@ def checkstatus(req):
 
 
 
-def declineProposals(req):
-    proposal = Request.objects.filter(from_user = req.user)
+def declineProposals(req,pk):
+    proposal = Request.objects.get(id=pk)
     proposal.delete()
-    return render(req,'pages/proposals.html')
+    return redirect('proposals')
 
 class AboutPageView(TemplateView):
     template_name = 'pages/about.html'

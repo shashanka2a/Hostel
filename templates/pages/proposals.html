@@ -21,7 +21,7 @@
       </thead>
       <tbody>
 
-            <!-- Displays a list of all the partner Proposals sent to Check-In.com and an Accept/Refuse Button -->
+
           {% for proposal in proposals%}
 
             <tr>
@@ -31,18 +31,21 @@
               <td>{{proposal.place}}</td>
               <td>{{proposal.purpose}}</td>
 
-
-                  <td><a class="btn btn-success pull-right" href="http://127.0.0.1:8000/proposals/accept">Accept</a></td>
-                  <td><a class="btn btn-danger pull-right" href="http://127.0.0.1:8000/proposals/reject">Refuse</a></td>
-
-
+                <form action="{% url 'accept_req' proposal.id %}" method="POST">
+                    {% csrf_token %}
+                    <td><input class="btn btn-success pull-right" type="submit" value="accept"></td>
+                </form>
+                <form action="{% url 'reject_req' proposal.id %}" method="POST">
+                    {% csrf_token %}
+                     <td><input class="btn btn-success pull-right" type="submit" value="Reject"></td>
+                </form>
             </tr>
 
-          {% endfor%}
+          {% endfor %}
      </tbody>
  </table>
 
-  <a href="http://127.0.0.1:8000" class="btn btn-info">Back to Dashboard.</a>
+  <a href="{% url 'home' %}" class="btn btn-info">Back to Dashboard.</a>
 
 
 

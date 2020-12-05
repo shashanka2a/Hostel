@@ -8,6 +8,6 @@ urlpatterns = [
     path('about/', AboutPageView.as_view(), name='about'),
     path('checkstatus/',checkstatus,name='checkstatus'),
     path('proposals/',showProposals,name='proposals'),
-    path('proposals/accept',acceptProposals,name='Accept proposal'),
-    path('proposals/reject',declineProposals,name='Reject proposal')
+    path('accept/<str:pk>',acceptProposals,name='accept_req'),
+    path('reject/<str:pk>',declineProposals,name='reject_req')
 ]

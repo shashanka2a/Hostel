@@ -23,6 +23,7 @@ class Request(models.Model):
     place = models.CharField(max_length=255,blank=True,null=True)
     purpose = models.CharField(max_length=255,blank=True,null=True)
 
+
 class Partners(models.Model):
     user = models.ForeignKey(CustomUser,on_delete=None,related_name='user')
     when = models.DateField(blank=True,null=True)
