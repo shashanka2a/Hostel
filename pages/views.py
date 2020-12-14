@@ -32,8 +32,13 @@ def outing_request(req):
 
 def acceptProposals(req,pk):
     proposal = Request.objects.get(id=pk)
-    proposal.assigned_to = 'accepted'
-    content = {'status': proposal.assigned_to}
+    tobj = Partners()
+    tobj.user = proposal.from_user
+    tobj.when = proposal.when
+    tobj.return_date = proposal.return_date
+    tobj.place = proposal.place
+    tobj.purpose = proposal.purpose
+    tobj.save()
     proposal.delete()
     return redirect('proposals')
 

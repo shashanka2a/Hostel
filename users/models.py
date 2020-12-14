@@ -23,6 +23,8 @@ class Request(models.Model):
     place = models.CharField(max_length=255,blank=True,null=True)
     purpose = models.CharField(max_length=255,blank=True,null=True)
 
+    def __str__(self):
+        return self.from_user
 
 class Partners(models.Model):
     user = models.ForeignKey(CustomUser,on_delete=None,related_name='user')
@@ -30,4 +32,5 @@ class Partners(models.Model):
     return_date  = models.DateField(blank=True,null=True)
     place = models.CharField(max_length=255,blank=True,null=True)
     purpose = models.CharField(max_length=255,blank=True,null=True)
-
+    def __str__(self):
+        return self.user
