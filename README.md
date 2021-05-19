@@ -44,11 +44,11 @@ Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ## UI
 
-### Student View
+### Signup and Login
 
 ![stu](student.PNG)
 
 
-### Warden View
+### Student View
 
 ![war](warden.PNG)
