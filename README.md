@@ -1,6 +1,6 @@
 # Hostel Outing Management System
 
-We have developed two views,each for student and warden.Through this a student can fill the outing request form and submit.The warden gets a list of student requests and can approve/decline.Meanwhile student can check his/her request status in the dashborad.
+We have developed two views,each for student and warden.Through this a student can fill the outing request form and submit.The warden gets a list of student requests and can approve/decline.Meanwhile student can check his/her request status in the dashboard.
 
 
 ## Setup
