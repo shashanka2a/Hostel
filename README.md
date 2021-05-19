@@ -46,9 +46,9 @@ Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ### Student View
 
-![stu](student.jpeg)
+![stu](student.PNG)
 
 
 ### Warden View
 
-![war](warden.jpeg)
+![war](warden.PNG)
