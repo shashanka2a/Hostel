@@ -1,4 +1,4 @@
-Hostel Outing Management System using Django.
+# Hostel Outing Management System using Django.
 
 We have developed two views,each for student and warden.Through this a student can fill the outing request form and submit.The warden gets a list of student requests and can approve/decline.Meanwhile student can check his/her request status in the dashborad.
 
@@ -14,7 +14,7 @@ Configure the virtual environment:
 ```
 $ cd hostel
 $ pip3 install virtualenv
-$ source venv/bin/activate`
+$ source venv/bin/activate
 ```
 
 Now,install the project dependencies in venv using:
