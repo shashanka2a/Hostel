@@ -42,4 +42,13 @@ In your terminal emulator:
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 
+## UI
 
+### Student View
+
+![stu](student.jpeg)
+
+
+### Warden View
+
+![war](warden.jpeg)
